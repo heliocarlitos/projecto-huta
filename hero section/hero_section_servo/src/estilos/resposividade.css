@@ -1,0 +1,40 @@
+@media screen and (max-width:1025px) {
+    .HeroSection {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .HeroSection .Bloco .Titulo {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width:466px) {
+    .HeroSection .Bloco figure .Icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width:423px) {
+    .HeroSection .Bloco .Titulo {
+        font-size: 2em;
+    }
+
+    .HeroSection .Bloco .Btn {
+        gap: 10px;
+    }
+
+    .HeroSection .Bloco .Btn a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:305px) {
+    .HeroSection .Bloco .AsClassificacoes {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

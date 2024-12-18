@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-branca-relativa: #E7E9EC;
+    --cor-do-titulo: #1F2937;
+    --cor-do-texto: #344350;
+    --cor-azul: #2563EB;
+    --cor-azul-hover: #2456c2;
+    --cor-azul-relativa: #E4E9FF;
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: var(--cor-branca);
+    font-size: 1em;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.HeroSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0 70px;
+    margin-top: 10px;
+}
+
+.HeroSection .Bloco {
+    width: 100%;
+    max-width: 600px;
+}
+
+.HeroSection .Bloco .Titulo {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--cor-do-titulo);
+    margin-bottom: 30px;
+}
+
+.HeroSection .Bloco .Titulo span {
+    color: var(--cor-azul);
+    text-wrap: nowrap;
+}
+
+.HeroSection .Bloco .Texto {
+    color: var(--cor-do-texto);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.HeroSection .Bloco .Btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.HeroSection .Bloco .Btn a {
+    text-decoration: none;
+    padding: 10px 13px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: .2s ease;
+}
+
+.HeroSection .Bloco .Btn a i {
+    display: flex;
+    font-size: 1.3em;
+    transform: translateY(2px);
+}
+
+.HeroSection .Bloco .Btn a:nth-child(1) {
+    background-color: var(--cor-azul);
+    color: var(--cor-branca);
+
+    &:hover {
+        background-color: var(--cor-azul-hover);
+    }
+}
+
+.HeroSection .Bloco .Btn a:nth-child(2) {
+    background-color: transparent;
+    color: var(--cor-do-texto);
+    border: 1px solid var(--cor-azul-relativa);
+
+    &:hover {
+        background-color: var(--cor-azul-relativa);
+    }
+}
+
+.HeroSection .Bloco .AsClassificacoes {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    gap: 5px;
+}
+
+.HeroSection .Bloco .AsClassificacoes .Classificacao {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.HeroSection .Bloco .AsClassificacoes .Classificacao .Estrelas {
+    color: var(--cor-do-titulo);
+}
+
+.HeroSection .Bloco .AsClassificacoes .Classificacao .Pontos {
+    font-size: .9em;
+}
+
+.HeroSection .Bloco .AsClassificacoes .Classificacao .Pontos span {
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.HeroSection .Bloco .AsClassificacoes .Classificacao .Classificadora {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.HeroSection .Bloco .AsClassificacoes .Classificacao .Classificadora2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    color: var(--cor-do-titulo);
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.HeroSection .Bloco img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.HeroSection .Bloco figure {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-25px) translateY(25px);
+        border-radius: 10px;
+        background-image: linear-gradient(to top, var(--cor-azul-relativa), transparent);
+    }
+}
+
+.HeroSection .Bloco figure .Icon {
+    position: absolute;
+    bottom: -37px;
+    right: 0;
+    color: var(--cor-branca);
+}
