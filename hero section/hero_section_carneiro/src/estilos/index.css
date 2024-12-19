@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-branca-suave: #e1e8f8;
+    --cor-do-titulo: #1f2937;
+    --cor-do-texto: #344350;
+    --cor-azul: #2563EB;
+    --cor-azul-hover: #2456c2;
+    --cor-vermelha: #ae00fff8;
+    --cor-borda: #b8b8b8;
+    --cor-borda-hover: #7e7e7e;
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: var(--cor-branca);
+    font-size: 1em;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+button {
+    font-family: "Inter", serif;
+}
+
+.HeroSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 0 70px;
+    position: relative;
+}
+
+.HeroSection .Bloco:nth-child(1) {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.HeroSection .Bloco .Titulo {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--cor-do-titulo);
+}
+
+.HeroSection .Bloco .Texto {
+    color: var(--cor-do-texto);
+    line-height: 1.6;
+}
+
+.HeroSection .Bloco .Formulario {
+    width: 100%;
+}
+
+.HeroSection .Bloco .Formulario form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.HeroSection .Bloco .Formulario form input {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-borda);
+    outline: 0;
+    color: var(--cor-do-texto);
+    padding: 10px;
+    font-size: 1em;
+    transition: .2s ease;
+
+    &:focus {
+        border: 1px solid var(--cor-azul);
+    }
+}
+
+.HeroSection .Bloco .Formulario form button {
+    text-wrap: nowrap;
+    height: 45px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    font-size: .9em;
+    align-items: center;
+    border: 0;
+    background-color: var(--cor-azul);
+    color: var(--cor-branca);
+    transition: .2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--cor-azul-hover);
+    }
+}
+
+.HeroSection .Bloco .Formulario form button span {
+    margin-left: 5px;
+}
+
+.HeroSection .Bloco .Confianca {
+    margin-top: 50px;
+}
+
+.HeroSection .Bloco .Confianca .Titulo {
+    font-size: .8em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.HeroSection .Bloco .Confianca .Logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.HeroSection .Bloco .Confianca .Logos svg {
+    width: 90px;
+}
+
+.HeroSection .Bloco img {
+    width: 650px;
+    height: auto;
+    border-radius: 10px;
+}

@@ -1,0 +1,71 @@
+@media screen and (max-width: 1193px) {
+    .HeroSection .Bloco img {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1101px) {
+    .HeroSection .Bloco .Titulo {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    .HeroSection {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .HeroSection .Bloco img {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 943px) {
+    .HeroSection {
+        flex-direction: column;
+    }
+
+    .HeroSection .Bloco img {
+        width: 100%;
+    }
+
+    .HeroSection .Bloco .Confianca {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    main {
+        margin-top: 0;
+    }
+
+    .HeroSection,
+    .HeroSection .Bloco:nth-child(1) {
+        gap: 20px;
+    }
+
+    .HeroSection .Bloco .Formulario form button {
+        padding: 10px 15px;
+    }
+
+    .HeroSection .Bloco .Formulario form button span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 366px) {
+    .HeroSection .Bloco .Titulo {
+        font-size: 1.6em;
+    }
+
+    .HeroSection .Bloco .Formulario form {
+        flex-direction: column;
+    }
+
+    .HeroSection .Bloco .Formulario form button {
+        width: 100%;
+        max-width: 90px;
+    }
+}
