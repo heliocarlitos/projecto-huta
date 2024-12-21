@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-branca-suave: #49454F;
+    --fundo-do-link-intro: #333039;
+    --cor-borda: #5e5e5e;
+    --cor-do-titulo: #E5E7EB;
+    --cor-do-texto: #A8B6B6;
+    --cor-azul: #2563EB;
+    --cor-azul-hover: #2456c2;
+    --cor-vermelha: #ae00fff8;
+    --cor-fundo-do-site: #000;
+
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: var(--cor-fundo-do-site);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+i {
+    font-size: 1.4em;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.HeroSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 0 70px;
+    position: relative;
+    transform: translateY(100px);
+}
+
+
+.HeroSection .Intro a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 5px 5px 20px;
+    border-radius: 100px;
+    font-weight: 400;
+    color: var(--cor-do-titulo);
+    font-size: .9em;
+    border: 1px solid var(--cor-borda);
+    background-color: var(--fundo-do-link-intro);
+
+}
+
+.HeroSection .Intro a i {
+    background-color: var(--cor-branca-suave);
+    padding: 5px 10px;
+    border-radius: 100px;
+}
+
+.HeroSection .Titulo {
+    font-size: 3.3em;
+    font-weight: 600;
+    color: var(--cor-do-titulo);
+    width: 100%;
+    max-width: 630px;
+    text-align: center;
+}
+
+.HeroSection .Texto p {
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 700px;
+    color: var(--cor-do-texto);
+}
+
+.HeroSection .Btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.HeroSection .Btn a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    border-radius: 100px;
+    background-image: linear-gradient(45deg, var(--cor-azul) 10%, var(--cor-vermelha) 90%);
+    color: var(--cor-branca);
+    border: 1px solid var(--cor-azul);
+
+    &:hover {
+        background-image: linear-gradient(-65deg, var(--cor-azul) 10%, var(--cor-vermelha) 90%);
+    }
+}

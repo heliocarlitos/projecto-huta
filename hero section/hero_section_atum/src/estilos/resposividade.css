@@ -1,0 +1,43 @@
+@media screen and (max-width: 576px) {
+    .HeroSection {
+        padding: 20px;
+    }
+
+    .HeroSection .Titulo {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 584px) {
+    .HeroSection {
+        transform: translateY(0px);
+    }
+    .HeroSection .Info {
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+    }
+
+    .HeroSection .Info span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .HeroSection .Intro a p span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    .HeroSection .Btn a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 351px) {
+    .HeroSection .Titulo {
+        font-size: 2em;
+    }
+}
