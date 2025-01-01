@@ -14,7 +14,6 @@
     --cor-azul: #2563EB;
     --cor-azul-hover: #2456c2;
     --cor-borda: #b8b8b8;
-    --cor-borda-hover: #7e7e7e;
 }
 
 body {
@@ -30,8 +29,8 @@ a {
 
 main {
     width: 100%;
-    max-width: 1400px;
     margin: auto;
+    overflow: hidden;
 }
 
 .HeroForm {
@@ -44,7 +43,6 @@ main {
     position: relative;
     color: var(--cor-do-texto);
     position: relative;
-    overflow: hidden;
     padding-top: 50px;
 
     &::after {
@@ -56,7 +54,7 @@ main {
         background-color: #d5e3fd;
         top: 0;
         right: 0;
-        z-index:-1;
+        z-index: -1;
         transform: translateY(-50%) translateX(50%);
         box-shadow: 0 0 100px 300px #d5e3fd;
     }
@@ -134,7 +132,7 @@ main {
     max-width: 500px;
 }
 
-.HeroForm .Bloco form {
+.HeroForm .Bloco .SeccaoDoFormulario {
     width: 100%;
     background-color: var(--cor-branca);
     box-shadow: 0 0 20px 0 #0000002d;
@@ -145,18 +143,18 @@ main {
     gap: 20px;
 }
 
-.HeroForm .Bloco form .Titulo {
+.HeroForm .Bloco .SeccaoDoFormulario .Titulo {
     text-align: center;
     font-size: 1.3em;
     color: var(--cor-do-titulo);
     font-weight: 700;
 }
 
-.HeroForm .Bloco form .Texto p {
+.HeroForm .Bloco .SeccaoDoFormulario .Texto p {
     text-align: center;
 }
 
-.HeroForm .Bloco form .Texto p a {
+.HeroForm .Bloco .SeccaoDoFormulario .Texto p a {
     color: var(--cor-azul);
 
     &:hover {
@@ -164,7 +162,7 @@ main {
     }
 }
 
-.HeroForm .Bloco form .Google {
+.HeroForm .Bloco .SeccaoDoFormulario .Google {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,12 +180,12 @@ main {
     }
 }
 
-.HeroForm .Bloco form .Google .Icon {
+.HeroForm .Bloco .SeccaoDoFormulario .Google .Icon {
     display: flex;
     font-size: 1.4em;
 }
 
-.HeroForm .Bloco form .Ou {
+.HeroForm .Bloco .SeccaoDoFormulario .Ou {
     position: relative;
     display: flex;
     align-items: center;
@@ -204,18 +202,18 @@ main {
     }
 }
 
-.HeroForm .Bloco form .Ou p {
+.HeroForm .Bloco .SeccaoDoFormulario .Ou p {
     background-color: var(--cor-branca);
     padding: 0 20px;
 }
 
-.HeroForm .Bloco form .InputBox {
+.HeroForm .Bloco .SeccaoDoFormulario .InputBox {
     width: 100%;
     display: flex;
     gap: 10px;
 }
 
-.HeroForm .Bloco form .InputBox input {
+.HeroForm .Bloco .SeccaoDoFormulario .InputBox input {
     width: 100%;
     height: 45px;
     padding: 0 10px;
@@ -230,29 +228,29 @@ main {
     }
 }
 
-.HeroForm .Bloco form .Textleft {
+.HeroForm .Bloco .SeccaoDoFormulario .Textleft {
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.HeroForm .Bloco form .Textleft label {
+.HeroForm .Bloco .SeccaoDoFormulario .Textleft label {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
 }
 
-.HeroForm .Bloco form .Textleft label input {
+.HeroForm .Bloco .SeccaoDoFormulario .Textleft label input {
     width: 15px;
     height: 15px;
 }
 
-.HeroForm .Bloco form .Btn {
+.HeroForm .Bloco .SeccaoDoFormulario .Btn {
     width: 100%;
 }
 
-.HeroForm .Bloco form .Btn button {
+.HeroForm .Bloco .SeccaoDoFormulario .Btn button {
     width: 100%;
     height: 40px;
     outline: 0;
