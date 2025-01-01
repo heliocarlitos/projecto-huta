@@ -7,6 +7,11 @@
 @media screen and (max-width: 820px) {
     .HeroForm {
         flex-wrap: wrap;
+
+        &::after {
+            width: 300px;
+            height: 300px;
+        }
     }
 
     .HeroForm .Bloco:nth-child(1) .Testemunha {
@@ -32,9 +37,21 @@
     .HeroForm .Bloco:nth-child(1) .Titulo p {
         font-size: 2em;
     }
+
+    .HeroForm {
+        &::after {
+            box-shadow: 0 0 100px 200px #d5e3fd;
+        }
+    }
 }
 
 @media screen and (max-width: 400px) {
+    .HeroForm {
+        &::after {
+            box-shadow: 0 0 100px 100px #d5e3fd;
+        }
+    }
+
     .HeroForm .Bloco:nth-child(1) .Titulo p {
         font-size: 1.6em;
         line-height: 1.1;
