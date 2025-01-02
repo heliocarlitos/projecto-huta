@@ -1,0 +1,67 @@
+@media screen and (max-width: 1241px) {
+    .HeroForm .Bloco:nth-child(1) {
+        padding: 50px 0 30px 30px;
+    }
+
+    .HeroForm .Bloco figure img {
+        width: 600px;
+        transform: translateY(-30px);
+    }
+}
+
+@media screen and (max-width: 1167px) {
+    .HeroForm .Bloco:nth-child(1) .Titulo p {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .HeroForm {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .HeroForm .Bloco:nth-child(1) {
+        margin: auto;
+        max-width: 650px;
+        padding: 0 0 30px 0;
+    }
+
+    .HeroForm .Bloco figure {
+        justify-content: center;
+    }
+
+    .HeroForm .Bloco:nth-child(2) figure img {
+        width: 100%;
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .HeroForm {
+        flex-wrap: wrap;
+    }
+
+    .HeroForm .Bloco:nth-child(2) {
+        max-width: 100%;
+    }
+
+    .HeroForm .Bloco:nth-child(2) form {
+        margin: auto;
+        width: 600px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .HeroForm .Bloco:nth-child(1) .Titulo p {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .HeroForm .Bloco:nth-child(1) .Titulo p {
+        font-size: 1.6em;
+        line-height: 1.1;
+    }
+}
