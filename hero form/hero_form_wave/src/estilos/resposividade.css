@@ -1,0 +1,92 @@
+@media screen and (max-width: 705px) {
+    .HeroForm {
+        padding: 100px 20px;
+    }
+
+    .HeroForm .Icones {
+        transform: translateY(50px);
+    }
+
+    .HeroForm .Icones svg {
+        width: 200px;
+    }
+
+    .HeroForm .Icones svg:nth-child(1) {
+        width: 150px;
+        transform: translateX(-70px);
+    }
+
+    .HeroForm .Conteudo .Titulo p {
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (max-width: 555px) {
+    .HeroForm .Icones {
+        display: none;
+    }
+
+    .HeroForm .Conteudo .Confia,
+    .HeroForm .Conteudo .SeccaoDeFormulario form {
+        flex-direction: column;
+    }
+
+    .HeroForm .Conteudo .Confia {
+        margin: 30px 0;
+        gap: 10px;
+    }
+
+    .HeroForm .Conteudo .Confia .Linha {
+        width: 100%;
+        max-width: 170px;
+        height: 1px;
+    }
+
+    .HeroForm .Conteudo .Confia .Detalhes p {
+        text-align: center;
+    }
+
+    .HeroForm .Conteudo .Confia .Usuarios {
+        transform: translateX(10px);
+    }
+
+    .HeroForm .Conteudo .SeccaoDeFormulario form .Linha {
+        width: 100%;
+        height: 1px;
+        background-color: var(--cor-borda);
+    }
+
+    .HeroForm .Conteudo .SeccaoDeFormulario form button {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .HeroForm {
+        padding: 50px 20px;
+    }
+
+    .HeroForm .Conteudo .Titulo p {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 301px) {
+    .HeroForm {
+        padding: 30px 20px;
+    }
+
+    .HeroForm .Conteudo .MiniIntro {
+        margin-bottom: 10px;
+        font-size: .7em;
+    }
+
+    .HeroForm .Conteudo .Titulo p {
+        font-size: 1.3em;
+    }
+
+    .HeroForm .Conteudo .Confia {
+        margin: 20px 0;
+    }
+}

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-do-titulo: #1f2937;
+    --cor-do-texto: #344350;
+    --cor-azul: #2563EB;
+    --cor-azul-suave: #dee9ff;
+    --cor-azul-claro: #25d4eb;
+    --cor-azul-hover: #2456c2;
+    --cor-borda: #d6c7ff;
+    --cor-laranja: #ffa601;
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: var(--cor-branca);
+    font-size: 1em;
+}
+
+.Linha {
+    width: 1px;
+    height: 50px;
+    background-color: var(--cor-borda);
+}
+
+main {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.HeroForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    color: var(--cor-do-texto);
+    position: relative;
+    padding: 100px 70px;
+}
+
+.HeroForm .Icones {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    transform: translateY(100px);
+}
+
+.HeroForm .Icones svg {
+    width: 300px;
+}
+
+.HeroForm .Icones svg:nth-child(1) {
+    transform: translateX(-100px);
+    width: 250px;
+}
+
+.HeroForm .Icones svg:nth-child(1) path:nth-child(2) {
+    color: var(--cor-laranja);
+    transform: translateX(240px);
+
+}
+
+.HeroForm .Icones svg:nth-child(1) path:nth-child(3) {
+    color: var(--cor-azul-claro);
+}
+
+.HeroForm .Icones svg:nth-child(2) {
+    transform: translateX(70px);
+}
+
+.HeroForm .Icones svg:nth-child(2) path:nth-child(1) {
+    color: var(--cor-laranja);
+}
+
+.HeroForm .Icones svg:nth-child(2) path:nth-child(2) {
+    color: var(--cor-azul-claro);
+}
+
+.HeroForm .Conteudo {
+    margin: auto;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.HeroForm .Conteudo .MiniIntro {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .8em;
+    text-align: center;
+}
+
+.HeroForm .Conteudo .Titulo p {
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--cor-do-titulo);
+}
+
+.HeroForm .Conteudo .Titulo p span {
+    color: var(--cor-azul);
+}
+
+.HeroForm .Conteudo .Confia {
+    margin: 50px 0 30px 0;
+    gap: 20px;
+}
+
+.HeroForm .Conteudo .Confia,
+.HeroForm .Conteudo .Confia .Usuarios {
+    display: flex;
+    align-items: center;
+}
+
+.HeroForm .Conteudo .Confia .Usuarios img,
+.HeroForm .Conteudo .Confia .Usuarios .Circo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 3px solid var(--cor-branca);
+}
+
+.HeroForm .Conteudo .Confia .Usuarios figure,
+.HeroForm .Conteudo .Confia .Usuarios .Circo {
+    margin-left: -25px;
+}
+
+.HeroForm .Conteudo .Confia .Usuarios .Circo {
+    color: var(--cor-branca);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-do-texto);
+    font-size: .7em;
+}
+
+.HeroForm .Conteudo .Confia .Detalhes p {
+    text-align: left;
+}
+
+.HeroForm .Conteudo .Confia .Detalhes .Titulo p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: var(--cor-do-titulo);
+}
+
+.HeroForm .Conteudo .SeccaoDeFormulario {
+    width: 100%;
+}
+
+.HeroForm .Conteudo .SeccaoDeFormulario form {
+    margin: auto;
+    width: 100%;
+    max-width: 730px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    box-shadow: -3px 3px 5px 0px #00000013;
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    background-color: var(--cor-branca);
+}
+
+.HeroForm .Conteudo .SeccaoDeFormulario form input {
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: solid 2px var(--cor-branca);
+    outline: 0;
+    transition: .2s ease;
+    font-size: 1em;
+
+    &:hover {
+        border: solid 2px var(--cor-azul-suave);
+    }
+
+    &:focus {
+        border: solid 2px var(--cor-azul);
+    }
+}
+
+.HeroForm .Conteudo .SeccaoDeFormulario form button {
+    font-size: 1em;
+    width: 100%;
+    max-width: 140px;
+    min-width: 140px;
+    text-wrap: nowrap;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    background-color: var(--cor-azul);
+    color: var(--cor-branca);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .1s ease;
+
+    &:hover {
+        background-color: var(--cor-azul-hover);
+    }
+
+    &:active {
+        transform: scale(95%);
+    }
+}
