@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-do-titulo: #1f2937;
+    --cor-do-texto: #344350;
+    --cor-azul: #2563EB;
+    --cor-azul-suave: #dee9ff;
+    --cor-azul-claro: #25d4eb;
+    --cor-azul-hover: #2456c2;
+    --cor-borda: #d6c7ff;
+    --cor-laranja: #ffa601;
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: var(--cor-branca);
+    font-size: 1em;
+}
+
+.Linha {
+    width: 1px;
+    height: 50px;
+    background-color: var(--cor-borda);
+}
+
+main {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.HeroForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    position: relative;
+    color: var(--cor-do-texto);
+    position: relative;
+    padding: 100px 70px;
+}
+
+.HeroForm .Intro {
+    text-align: center;
+}
+
+.HeroForm .Intro .Titulo p {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--cor-do-titulo);
+    margin-bottom: 20px;
+}
+
+.HeroForm .SeccaoDoForm {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.HeroForm .SeccaoDoForm .Icones {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeroForm .SeccaoDoForm .Icones svg:nth-child(1) {
+    color: var(--cor-azul-claro);
+    width: 160px;
+    transform: translateX(-50px) translateY(30px);
+}
+
+.HeroForm .SeccaoDoForm .Icones svg:nth-child(2) {
+    color: var(--cor-laranja);
+    width: 80px;
+    transform: translateY(-70px) translateX(-10px);
+}
+
+.HeroForm .SeccaoDoForm form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    gap: 10px;
+    padding: 13px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    background-color: var(--cor-branca);
+    box-shadow: -2px 2px 8px 0 #0000001b;
+}
+
+.HeroForm .SeccaoDoForm form input {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    padding: 0 15px;
+    border: 2px solid transparent;
+    outline: 0;
+    transition: .2s ease;
+    font-size: 1em;
+
+    &:hover {
+        border: 2px solid var(--cor-azul-suave);
+    }
+
+    &:focus {
+        border: 2px solid var(--cor-azul);
+    }
+
+}
+
+.HeroForm .SeccaoDoForm form button {
+    border: 0;
+    outline: 0;
+    width: 50px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 5px;
+    background-color: var(--cor-azul);
+    color: var(--cor-branca);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--cor-azul-hover);
+    }
+}
+
+.HeroForm .Tag {
+    margin: auto;
+    width: 100%;
+    max-width: 830px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-top: 50px;
+}
+
+.HeroForm .Tag a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-do-titulo);
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    padding: 12px;
+    gap: 5px;
+    border-radius: 5px;
+    transition: .2s ease;
+
+    &:hover {
+        background-color: var(--cor-azul);
+        color: var(--cor-branca);
+    }
+}
+
+.HeroForm .Tag a .Icon {
+    display: flex;
+    font-size: 1.3em;
+}

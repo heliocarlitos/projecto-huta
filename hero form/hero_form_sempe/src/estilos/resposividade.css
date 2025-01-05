@@ -1,0 +1,56 @@
+@media screen and (max-width: 859px) {
+    .HeroForm {
+        padding: 100px 30px;
+    }
+
+}
+
+@media screen and (max-width: 778px) {
+    .HeroForm .Tag {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 582px) {
+    .HeroForm {
+        padding: 50px 30px;
+    }
+
+    .HeroForm .SeccaoDoForm .Icones {
+        display: none;
+    }
+
+    .HeroForm .SeccaoDoForm,
+    .HeroForm .Tag {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .HeroForm {
+        padding: 50px 20px;
+    }
+
+    .HeroForm .Intro .Titulo p {
+        font-size: 2.3em;
+        margin-bottom: 10px;
+    }
+
+    .HeroForm .SeccaoDoForm form input,
+    .HeroForm .SeccaoDoForm form button {
+        height: 40px;
+    }
+
+    .HeroForm .SeccaoDoForm form button {
+        font-size: 1.3em;
+    }
+
+    .HeroForm .Tag a {
+        padding: 10px;
+    }
+
+    .HeroForm .Tag a .Icon {
+        font-size: 1.3em;
+    }
+}
