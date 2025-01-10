@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-do-titulo: #1f2937;
+    --borda: #dbdcde;
+    --cor-azul: #2563EB;
+    --cor-lilas: #a805ff;
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: var(--cor-branca);
+    font-size: 1em;
+}
+
+main {
+    width: 100%;
+    max-width: 1420px;
+    margin: auto;
+    overflow: hidden;
+    color: var(--cor-do-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    padding: 20px 70px;
+}
+
+.HeroIconCard {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.HeroIconCard .IconCard {
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    border: 1px solid var(--borda);
+    height: 170px;
+}
+
+.HeroIconCard .IconCard .Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 47px;
+    margin: auto;
+    height: 47px;
+    background-image: linear-gradient(-45deg, var(--cor-lilas), var(--cor-azul));
+    color: var(--cor-branca);
+    font-size: 1.8em;
+    border-radius: 10px;
+    position: relative;
+}
+
+.HeroIconCard .IconCard .Titulo {
+    color: var(--cor-do-titulo);
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+}
