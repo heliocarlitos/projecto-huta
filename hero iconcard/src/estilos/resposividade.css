@@ -1,0 +1,26 @@
+@media screen and (max-width: 1054px) {
+    .HeroIconCard .IconCard {
+        max-width: 600px;
+    }
+
+    main {
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .HeroIconCard .IconCard .Icon {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .HeroIconCard {
+        display: flex;
+    }
+
+    .HeroIconCard .IconCard {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
