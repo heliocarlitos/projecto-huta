@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fontes/Inter/VariasFontes.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-branca: #ffffff;
+  --cor-do-titulo: #000203;
+  --cor-do-texto: #344350;
+  --cor-azul: #2563eb;
+  --cor-azul-transparent: #2564eb1f;
+  --cor-azul-hover: #2456c2;
+  --borda: 2px solid #e2dffa;
+  --borda-fina: 2px solid var(--cor-da-linha-fina);
+  --cor-da-linha-fina: #001aff2f;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--cor-branca);
+  font-size: 1em;
+}
+
+button,
+label,
+p,
+a,
+ul,
+li {
+  line-height: 1.6;
+  color: var(--cor-do-texto);
+  font-size: 1em;
+  text-decoration: none;
+  list-style: none;
+}
+
+.Icon,
+svg,
+i {
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LinhaFinaX {
+  width: 100%;
+  height: 1px;
+  background-color: var(--cor-da-linha-fina);
+}
+
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 50px;
+  padding-inline: 40px;
+  padding-bottom: 30px;
+}
+
+.HeroSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  margin: auto;
+}
+
+.HeroSection .Intro {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.HeroSection .Intro .Titulo p {
+  margin-bottom: 10px;
+  color: var(--cor-do-titulo);
+  font-size: 2em;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.HeroSection .OsPrecos {
+  margin: auto;
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeroSection .OsPrecos .CardPreco {
+  margin: auto;
+  border-radius: 10px;
+  border: var(--borda);
+  padding: 40px;
+  width: 100%;
+  max-width: 430px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to bottom,
+        var(--cor-azul-transparent),
+        transparent);
+    right: -100px;
+    top: 20px;
+    border-radius: 100px;
+  }
+}
+
+.HeroSection .OsPrecos .CardPreco .IconDecorativo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.HeroSection .OsPrecos .CardPreco .TipoDePlano p {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--cor-azul);
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor p {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--cor-do-titulo);
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor span {
+  color: var(--cor-do-texto);
+  font-weight: 500;
+  transform: translateY(-15px);
+}
+
+.HeroSection .OsPrecos .CardPreco ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.HeroSection .OsPrecos .CardPreco a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  border: var(--borda-fina);
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: var(--cor-azul-hover);
+    color: var(--cor-branca);
+  }
+}
+
+.HeroSection .OsPrecos .CardPreco .Activo {
+  background-color: var(--cor-azul);
+  color: var(--cor-branca);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media screen and (max-width: 650px) {
+  main {
+    padding-inline: 20px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .HeroSection .OsPrecos {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

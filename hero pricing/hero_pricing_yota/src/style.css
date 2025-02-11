@@ -1,0 +1,261 @@
+@font-face {
+    font-family: "Inter";
+    src: url('fontes/Inter/VariasFontes.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --preta-secundaria: #333;
+    --cor-branca: #FFFFFF;
+    --cor-branca-suave: #e1e8f8;
+    --cor-do-titulo: #000203;
+    --cor-do-texto: #344350;
+    --cor-azul: #2563EB;
+    --cor-azul-transparent: #2564eb2d;
+    --cor-azul-hover: #2456c2;
+
+    --borda-fina: 1px solid #cecece;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--cor-branca);
+    font-size: 1em;
+}
+
+button,
+label,
+p,
+a {
+    line-height: 1.6;
+    color: var(--cor-do-texto);
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.Icon,
+svg,
+i {
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 50px;
+    padding-inline: 40px;
+}
+
+.HeroSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin: auto;
+}
+
+.HeroSection .Intro {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.HeroSection .Intro .Titulo p {
+    margin-bottom: 10px;
+    color: var(--cor-do-titulo);
+    font-size: 2em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.HeroSection .EscolherPlano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.HeroSection .EscolherPlano label {
+    cursor: pointer;
+}
+
+.HeroSection .EscolherPlano .InputBox label {
+    width: 60px;
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    position: relative;
+    transition: .2s ease;
+    overflow: hidden;
+    background-color: var(--preta-secundaria);
+    border: 1px solid var(--preta-secundaria);
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        background-color: var(--cor-branca);
+        border-radius: 100px;
+        transition: .2s ease;
+        transform: translateX(-15px) translateY(0px);
+    }
+}
+
+.HeroSection .EscolherPlano .InputBox input {
+    display: none;
+}
+
+.HeroSection .EscolherPlano .InputBox input[type="checkbox"]:checked+label {
+    background-color: var(--cor-azul);
+    border: 1px solid var(--cor-azul);
+}
+
+.HeroSection .EscolherPlano .InputBox input[type="checkbox"]:checked+label::after {
+    transform: translateX(15px) translateY(0px);
+}
+
+.HeroSection .OsPrecos {
+    margin: auto;
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeroSection .OsPrecos .CardPreco {
+    margin: auto;
+    border-radius: 10px;
+    border: var(--borda-fina);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.HeroSection .OsPrecos .CardPreco .TipoDePlano p {
+    text-align: center;
+    color: var(--cor-do-titulo);
+    font-weight: 500;
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor p {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--cor-do-titulo);
+}
+
+.HeroSection .OsPrecos .CardPreco .Validade {
+    text-align: center;
+    font-size: .9em;
+    margin: -10px 0 20px 0;
+}
+
+.HeroSection .OsPrecos .CardPreco ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.HeroSection .OsPrecos .CardPreco ul .Icon {
+    color: var(--cor-azul);
+    font-size: 1em;
+}
+
+.HeroSection .OsPrecos .CardPreco ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.HeroSection .OsPrecos .CardPreco a {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--borda-fina);
+    border-radius: 5px;
+    color: var(--cor-do-titulo);
+    transition: .2s ease;
+
+    &:hover {
+        background-color: var(--cor-azul-hover);
+        color: var(--cor-branca);
+        border: 1px solid transparent;
+    }
+}
+
+.HeroSection .OsPrecos .MaisPopular {
+    border: 2px solid var(--cor-azul);
+    box-shadow: 0 5px 20px 0 #1b01ff65;
+}
+
+.HeroSection .OsPrecos .MaisPopular .Mp {
+    text-align: center;
+    margin-bottom: 10px;
+
+    p {
+        background-color: var(--cor-azul-transparent);
+        color: var(--cor-azul-hover);
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: .8em;
+        margin: auto;
+        display: inline-flex;
+        padding: 5px 15px;
+    }
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor p span,
+.HeroSection .OsPrecos .MaisPopular .Valor span {
+    font-size: .6em;
+}
+
+.HeroSection .OsPrecos .MaisPopular a {
+    border: 1px solid transparent;
+    background-color: var(--cor-azul);
+    color: var(--cor-branca);
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media screen and(max-width:650px) {
+    main {
+        padding-inline: 20px;
+    }
+}
+
+@media screen and(max-width:280px) {
+    .HeroSection .OsPrecos {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}

@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Inter";
+    src: url('fontes/Inter/VariasFontes.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --preta-secundaria: #333;
+    --cor-branca: #FFFFFF;
+    --cor-branca-suave: #e1e8f8;
+    --cor-do-titulo: #000203;
+    --cor-do-texto: #344350;
+    --cor-azul: #2563EB;
+    --cor-azul-transparent: #2564eb2d;
+    --cor-azul-hover: #2456c2;
+
+    --borda-fina: 1px solid #cecece;
+    --borda-azul: 1px solid var(--cor-azul);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--cor-branca);
+    font-size: 1em;
+}
+
+button,
+label,
+p,
+a {
+    line-height: 1.6;
+    color: var(--cor-do-texto);
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.Icon,
+svg,
+i {
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 50px;
+    padding-inline: 40px;
+}
+
+.HeroSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin: auto;
+}
+
+.HeroSection .Intro {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.HeroSection .Intro .Titulo p {
+    color: var(--cor-do-titulo);
+    font-size: 2em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.HeroSection .OsPrecos {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to left, transparent, #d6d5d5, transparent);
+        transform: translateY(-30px);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to left, transparent, #d6d5d5, transparent);
+        transform: translateY(-110px);
+    }
+}
+
+.HeroSection .OsPrecos .CardPreco {
+    margin: auto;
+    border-radius: 10px;
+    padding: 50px 30px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.HeroSection .OsPrecos .LinhaV1,
+.HeroSection .OsPrecos .LinhaV2,
+.HeroSection .OsPrecos .LinhaV3 {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-image: linear-gradient(to top, transparent, #d6d5d5, transparent);
+        right: 0;
+    }
+}
+
+.HeroSection .OsPrecos .CardPreco .TipoDePlano p {
+    color: var(--cor-do-titulo);
+    font-weight: 500;
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor p {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--cor-do-titulo);
+}
+
+.HeroSection .OsPrecos .CardPreco .Valor p span {
+    font-size: .6em;
+}
+
+.HeroSection .OsPrecos .CardPreco ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.HeroSection .OsPrecos .CardPreco ul li {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.HeroSection .OsPrecos .CardPreco a {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--borda-azul);
+    border-radius: 5px;
+    color: var(--cor-azul);
+    transition: .2s ease;
+    margin-top: 20px;
+
+    &:hover {
+        background-color: var(--cor-azul-hover);
+        color: var(--cor-branca);
+        border: 1px solid transparent;
+    }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media screen and (max-width:1081px) {
+
+    .HeroSection .OsPrecos,
+    .HeroSection .OsPrecos .LinhaV3 {
+
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:831px) {
+    .HeroSection .OsPrecos .LinhaV2 {
+        &::before {
+            display: none;
+        }
+    }
+
+    .HeroSection .OsPrecos .LinhaV3 {
+        &::before {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    .HeroSection .OsPrecos .LinhaV1,
+    .HeroSection .OsPrecos .LinhaV2,
+    .HeroSection .OsPrecos .LinhaV3 {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    main {
+        padding-inline: 20px;
+    }
+}
+
+@media screen and (max-width:280px) {
+    .HeroSection .OsPrecos {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
